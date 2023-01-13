@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #f2675b;
+}
+
+a { text-decoration: none; }
+
+.container {
+    padding: 100px;
+}
+
+.calc-body {
+    position: relative;
+    width: 400px;
+    min-height: 510px;
+    margin: auto;
+    background-color: #4b4b4b;
+    border-radius: 50px;
+    box-shadow: inset 13px 8px 0px 5px #2b2b2b;
+    padding-left: 20px;
+    z-index: 2;
+}
+
+.calc-body-shadow {
+    position: relative;
+    bottom: 224px;
+    left: 540px ;
+    width: 400px;
+    height: 200px;
+    background-color: #b8574f;
+    border-radius: 50px;
+    transform: skew(50deg, -7deg);
+    z-index: 1;
+}
+
+.calc-screen {
+    padding: 50px 25px 30px 30px;
+    text-align: center;
+    min-height: 100px;
+}
+
+.calc-operation {
+    width: 320px;
+    min-height: 80px;
+    background-color: #b5c3b3;
+    padding: 10px 26px 0;
+    font-size: 50px;
+    font-family: 'Concert One', cursive;
+    color: #1b263b;
+    text-align: right;
+    box-shadow:
+        inset 0px -8px 0px -3px #939e94,
+        inset -7px 0px 0px 0px #6a726b;
+}
+
+.calc-history {
+    width: 320px;
+    height: 39px;
+    background-color: #b5c3b3;
+    padding: 20px 26px 0;
+    font-size: 16px;
+    font-family: 'Concert One', cursive;
+    color: #646c7a;
+    text-align: right;
+    box-shadow: inset -7px 0px 0px 0px #6a726b;
+}
+
+.calc-buttons {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      ". . . ."
+      ". . . ."
+      ". . . ."
+      ". . . ."
+      ". . equals equals";
+    padding: 0 40px;
+}
+
+.equals {
+    grid-area: equals; 
+    background-color: #dca86e;
+    box-shadow: -4px -2px 0px 1px #aa8156;
+}
+
+.equals:active {
+    box-shadow: -2px -2px 0px 1px #aa8156;
+}
+
+button {
+    height: 45px;
+    background-color: #cdcdcd;
+    font-family: 'Righteous', cursive;
+    font-size: 18px;
+    color: #575757;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: -4px -2px 0px 1px #9d9d9d;
+}
+
+button:active {
+    transform: translateX(-2px);
+    box-shadow: -2px -2px 0px 1px #9d9d9d;
+}
+
+.red-btn {
+    background-color: #de524b;
+    color: #E0E0E0;
+    box-shadow: -4px -2px 0px 1px #a93f3a;
+}
+
+.red-btn:active {
+    box-shadow: -2px -2px 0px 1px #a93f3a;
+}
+
