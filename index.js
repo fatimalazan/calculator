@@ -2,15 +2,16 @@ let currentValue = '';
 let prevValue = '';
 let action = undefined;
 
-const numbers = document.querySelectorAll('.btn-digit');
+const btn = document.querySelectorAll('.btn');
 const operators = document.querySelectorAll('.btn-operator');
+const plusminus = document.getElementById('plusminus');
 const equals = document.getElementById('equalsBtn');
 const clear = document.getElementById('reset');
 const del = document.getElementById('delete');
 const previous = document.getElementById('history');
 const current = document.getElementById('display-input');
 
-numbers.forEach((button) => {
+btn.forEach((button) => {
   button.addEventListener('click', (e) => {
     handleButton(e, 'textContext');
   });
@@ -35,6 +36,13 @@ del.addEventListener('click', (e) => {
 
 clear.addEventListener('click', () => {
   clearDisplay();
+});
+
+plusminus.addEventListener('click', (e) => {
+  if (!isNaN(parseFloat(current.textContent))) {
+    current.textContent = -current.textContent;
+    currentValue = parseFloat(current.textContent);
+  }
 });
 
 //keyboard support
